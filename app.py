@@ -1,25 +1,26 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 import pickle
+import numpy as np
 
-st.set_page_config(page_title="Credit Card Fraud Detection")
+# Load Model
+with open("knn_model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+# Load Scaler
+with open("scaler.pkl", "rb") as f:
+    scaler = pickle.load(f)
 
 st.title("Credit Card Fraud Detection")
 
-# Load model and scaler
-model = pickle.load(open("knn_model(1).pkl", "rb"))
-scaler = pickle.load(open("scaler(1).pkl", "rb"))
+st.write("Enter Transaction Details")
 
-st.subheader("Enter Transaction Details")
-
-time = st.number_input("Time")
-v1 = st.number_input("V1")
-v2 = st.number_input("V2")
-v3 = st.number_input("V3")
-v4 = st.number_input("V4")
-v5 = st.number_input("V5")
-amount = st.number_input("Amount")
+time = st.number_input("Time", value=0.0)
+v1 = st.number_input("V1", value=0.0)
+v2 = st.number_input("V2", value=0.0)
+v3 = st.number_input("V3", value=0.0)
+v4 = st.number_input("V4", value=0.0)
+v5 = st.number_input("V5", value=0.0)
+amount = st.number_input("Amount", value=0.0)
 
 if st.button("Predict"):
 
