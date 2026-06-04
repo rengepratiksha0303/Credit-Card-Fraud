@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load Model
-with open("knn_model.pkl") as f:
+with open("KNN MODEL (1).pkl") as f:
     model = pickle.load(f)
 
 # Load Scaler
