@@ -3,11 +3,11 @@ import pickle
 import numpy as np
 
 # Load Model
-with open("KNN MODEL (1).pkl") as f:
+with open("KNN MODEL (1).pkl", "rb") as f:
     model = pickle.load(f)
 
 # Load Scaler
-with open("SCALER (2).pkl") as f:
+with open("SCALER (2).pkl", "rb") as f:
     scaler = pickle.load(f)
 
 st.title("Credit Card Fraud Detection")
