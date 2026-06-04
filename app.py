@@ -7,7 +7,7 @@ with open("knn_model.pkl") as f:
     model = pickle.load(f)
 
 # Load Scaler
-with open("scaler.pkl") as f:
+with open("SCALER (2).pkl") as f:
     scaler = pickle.load(f)
 
 st.title("Credit Card Fraud Detection")
