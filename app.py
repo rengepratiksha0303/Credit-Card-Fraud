@@ -8,8 +8,8 @@ st.set_page_config(page_title="Credit Card Fraud Detection")
 st.title("Credit Card Fraud Detection")
 
 # Load model and scaler
-model = pickle.load(open("knn_model.pkl", "rb"))
-scaler = pickle.load(open("scaler.pkl", "rb"))
+model = pickle.load(open("knn_model(1).pkl", "rb"))
+scaler = pickle.load(open("scaler(1).pkl", "rb"))
 
 st.subheader("Enter Transaction Details")
 
